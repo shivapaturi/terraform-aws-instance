@@ -5,8 +5,8 @@ variable "ami_id" {
 }
 
 variable "instance_type" {
-    type = string
     default = "t3.micro"
+    type = string
     description = "Instance size"
 
     validation {
@@ -14,6 +14,7 @@ variable "instance_type" {
         error_message = "Valid values for instance_type are: t3.micro, t3.small, t3.medium"
     } 
 }
+
 # mandatory to provide
 variable "sg_ids" {
     type = list
